@@ -12,6 +12,18 @@ ChatGPT Team 订阅协议的端到端重放工具，附带从零实现的 hCaptc
 [![CI](https://img.shields.io/github/actions/workflow/status/DanOps-1/Gpt-Agreement-Payment/ci.yml?label=CI)](https://github.com/DanOps-1/Gpt-Agreement-Payment/actions)
 [![Use](https://img.shields.io/badge/use-CTF%20%2F%20bug%20bounty-red)](#法律边界)
 
+---
+
+## 赞助商目录
+
+感谢以下朋友与伙伴对 Gpt-Agreement-Payment 的支持。
+
+| Logo | 名称 | 介绍 | 官网 |
+| --- | --- | --- | --- |
+| <a href="https://www.right.codes/register?aff=c408930b" target="_blank"><img src="docs/images/sponsors/right-code.png" alt="Right Code" width="140" /></a> | Right Code | 企业级 AI Agent 中转平台，OpenAI / Anthropic / Gemini 全协议兼容，统一接入 Claude Code、Codex、Gemini CLI、Grok Code，适合需要稳定接口、便捷接入的开发者与团队。<br><br>**邀请码：`c408930b`**<br>**返利：邀请者 5% · 好友加赠 5%**（好友支付完成后，双方同时获得实付金额对应额度的 5%） | [https://www.right.codes/register?aff=c408930b](https://www.right.codes/register?aff=c408930b) |
+
+---
+
 > [!CAUTION]
 > **使用本项目即视为同意 [`NOTICE`](NOTICE) 的全部条款。** 项目按 AS IS 提供、无任何担保、维护者不负任何责任。仅限你拥有的系统 / 合法 CTF / 授权 bug bounty 项目 in-scope 资产 / 安全研究。**严禁**用于欺诈、规避支付、批量造号转售、违反第三方 ToS、未授权目标。一切法律责任由使用者自负。不接受条款就**不要使用**。
 
@@ -54,9 +66,7 @@ flowchart LR
 - 一个出口在 EU / US 的代理（PayPal 锁地区，Stripe 锁国家）
 - 一个 Cloudflare zone（用于开 catch-all 子域注册邮箱）
 - 一台能跑 Camoufox + Playwright 的 Linux（约 5 GB 磁盘 + 2 GB 内存）
-- （可选）一个 OpenAI 兼容的 VLM API key，hCaptcha 求解用；家宽 / 伪家宽出口通常不会触发 hCaptcha，无 VLM 时也会降级到 CLIP
-  - 赞助商推荐 <img src="https://www.right.codes/favicon.ico" width="14" height="14" alt=""> **[Right Code](https://www.right.codes/register?aff=c408930b)** —— 企业级 AI Agent 中转平台，OpenAI / Anthropic / Gemini 全协议兼容，支持 Claude Code / Codex / Gemini CLI / Grok Code 统一接入
-    - 通过 [**邀请链接**](https://www.right.codes/register?aff=c408930b) 注册（邀请码 `c408930b`）：好友支付完成后，**双方同时获得实付金额 5% 的额度**（邀请者返利 5% · 好友加赠 5%）
+- （可选）一个 OpenAI 兼容的 VLM API key，hCaptcha 求解用；家宽 / 伪家宽出口通常不会触发 hCaptcha，无 VLM 时也会降级到 CLIP（推荐用本项目赞助商 [Right Code](https://www.right.codes/register?aff=c408930b)，详见页首）
 - （可选）一个兼容 createTask/getTaskResult 协议的打码平台 API key，作为浏览器 passive captcha 的兜底
 
 第一次完整跑通通常要花 1–3 小时调通配置。daemon 模式跑稳后，单次 pipeline 约 5 分钟。
